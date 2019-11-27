@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+  
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+ 
+            <link rel="stylesheet" href="ex6.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
+            <title>Ex 2</title>            
+        </head>
+
+        <body>
+            <div class="forms">
+                <form id = "form" action = "#" onsubmit="return ValidatingFunction();" >
+                    Guess My Name: <input type="text" name="name" id="name" value=""> <br/><br/>
+
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+        <script type = "text/javascript">
+	function ValidatingFunction() {
+	 // if (event.type ==$( "form" ).submit(function( event ) {
+		var x = document.getElementById('name').value;
+		console.log("Hello this is value of x: " + x);
+		    document.getElementById("name").value = "";
+		
+		if (x === ""){
+		alert("Null!! Enter a name.");
+		return false;
+		}		
+
+		else{
+		alert("You have entered Something.");
+		return true;
+		}
+	}
+
+        </script>
+        </body>
+</html>
